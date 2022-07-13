@@ -1,13 +1,11 @@
 <script setup>
-import HightLightPJ from "./components/HightLightPJ.vue";
+import Media from "./components/Media.vue";
 
 components: {
-  HightLightPJ;
+  Media;
 }
 </script>
 
 <template>
-  <HightLightPJ />
+  <Media />
 </template>
-
-<style></style>

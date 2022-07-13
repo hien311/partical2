@@ -1,9 +1,10 @@
-
-
-
 .center-all {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: rgb(194, 115, 115);
 }
