@@ -6,5 +6,28 @@
 }
 
 body {
-    background-color: rgb(194, 115, 115);
+    div {
+        background: rgb(65, 40, 40);
+    }
+}
+
+.text-stroke {
+    $color: red !default;
+    $width: 2.5px !default;
+
+    color: transparent;
+    -webkit-text-stroke: var(--width, $width) $color;
+    // -webkit-text-stroke: $width $color;
+}
+
+.highlight {
+    $color: white !default;
+    color:white;
+    font-weight: 600;
+}
+
+.highlight.underline {
+    color:red;
+    font-weight: 700;
+    text-transform: uppercase;
 }
