@@ -14,22 +14,30 @@
         class="absolute w-60 left-[calc(100%+200px)] top-1/2 -translate-y-1/2"
       >
         <div
-          class="relative uppercase font-bold text-lg text-[#ff0000] after:w-40 after:h-[2px] after:left-1/2 after:bottom-0 after:bg-white"
+          class="pj-name w-fit pb-[2px] uppercase font-bold text-lg text-[red] tracking-[1px]"
         >
           project
         </div>
 
-        <div class="text-2xl uppercase text-white">{{ pjName }}</div>
+        <div
+          class="text-4xl mt-3 mb-2 uppercase font-bold tracking-[4px] text-white"
+        >
+          {{ pjName }}
+        </div>
 
-        <div>
-          <div v-for="item in pjDes" :key="item" class="flex">
-            <div>arr</div>
-            <div v-html="item"></div>
+        <div class="-ml-4">
+          <div v-for="item in pjDes" :key="item" class="flex mt-2">
+            <div class="text-[red] mr-1 w-4">{{ "<" }}</div>
+            <div v-html="item" class="text-gray3"></div>
           </div>
 
-          <div class="flex">
-            <div class="uppercase">Head to site</div>
-            <div>arr</div>
+          <div class="flex items-center ml-4 mt-2">
+            <div
+              class="uppercase text-sm text-gray3 font-semibold tracking-wide"
+            >
+              Head to site
+            </div>
+            <div class="text-[red] ml-2">{{ ">" }}</div>
           </div>
         </div>
       </div>
@@ -51,7 +59,7 @@ export default {
     pjDes: {
       default: [
         "Cyball is a cyberpunk, football themed web3 game with innovative blockchain technology and competitive gameplay where players can earn rewards",
-        "Backed by <span>Animoca, Kingsway Capital, Bitkraft</span> among others...",
+        "Backed by <span class='highlight'>Animoca, Kingsway Capital, Bitkraft</span> among others...",
       ],
     },
   },
@@ -74,6 +82,22 @@ export default {
       width: 160px;
       height: 2px;
       background: white;
+    }
+  }
+
+  .pj-name {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: white;
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+      transform: translateX(-50%);
     }
   }
 }
